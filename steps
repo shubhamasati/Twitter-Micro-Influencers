@@ -1,0 +1,21 @@
+-- Put your twitter credentials in the file 'twitter.secrets'
+
+-- Put all the related words in 'related_words' file, you want to fetch the tweets about.
+
+-- Run the 'twitter_data_stream.py' file.
+    i.e. " Python3 twitter_data_stream.py "
+
+-- Above program will run for 5 minutes then automatically turned off.
+
+-- The above program will create file 'tweets.json' in current directory that will contain all the live tweets 
+downloaded in 5 minutes.
+
+-- Create one directory 'twitter' in HDFS,
+    i.e. " hdfs dfs -mkdir /twitter "
+
+-- Put this file 'tweets.json' into HDFS using the command,
+    i.e. " hdfs dfs -copyFromLocal /<path to dir>/tweets.json /twitter/ "
+
+-- Run the hive script 'Micro-Influencers.hql' 
+
+ 
