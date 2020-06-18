@@ -29,7 +29,7 @@ class TListener(StreamListener):
 
         tweets_file.write(raw_data)
 
-        if(time.time() - start_time > 3):
+        if(time.time() - start_time > 300):
             print("Times Up! Exiting....")
             tweets_file.close()
             exit(0)
